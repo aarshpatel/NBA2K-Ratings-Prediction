@@ -1,0 +1,447 @@
+Player,Team,Rank
+Russell Westbrook ,OKC,95
+Stephen Curry,GSW,94
+Isaiah Thomas ,BOS,92
+Chris Paul ,LAC,92
+Kyrie Irving ,CLE,90
+Kyle Lowry ,TOR,89
+John Wall ,WAS,89
+Damian Lillard,POR,89
+Kemba Walker ,CHA,87
+Mike Conley ,MEM,86
+Eric Bledsoe ,PHX,86
+Goran Dragic ,MIA,84
+Jeff Teague ,IND,83
+Jrue Holiday ,NOP,82
+Reggie Jackson ,DET,81
+George Hill ,UTA,81
+Derrick Rose ,NYK,81
+Dennis Schroder ,ATL,81
+D'Angelo Russell,LAL,79
+Jeremy Lin ,BKN,78
+Deron Williams ,DAL,78
+Darren Collison,SAC,78
+Ricky Rubio ,MIN,78
+Tony Parker ,SAS,78
+Austin Rivers ,LAC,78
+J.J. Barea ,DAL,77
+Patty Mills ,SAS,77
+Elfrid Payton ,ORL,77
+Patrick Beverley,HOU,76
+Jordan Clarkson ,LAL,76
+Brandon Knight ,PHX,76
+T.J. McConnell ,PHI,75
+Cory Joseph,TOR,75
+Ish Smith,DET,75
+Brandon Jennings,NYK,75
+Marcus Smart ,BOS,75
+Aaron Brooks ,IND,75
+Jerryd Bayless ,PHI,75
+Emmanuel Mudiay ,DEN,74
+Beno Udrih ,DET,74
+Tim Frazier ,NOP,74
+Ty Lawson ,SAC,74
+D.J. Augustin ,ORL,74
+Ramon Sessions,CHA,74
+Raymond Felton,LAC,74
+Langston Galloway ,NOP,74
+Rajon Rondo ,CHI,74
+Sergio Rodriguez,PHI,74
+Shelvin Mack ,UTA,74
+Dejounte Murray ,SAS,74
+Tyus Jones ,MIN,73
+Devin Harris ,DAL,73
+Trey Burke,WAS,73
+Jameer Nelson ,DEN,73
+Shaun Livingston ,GSW,73
+Spencer Dinwiddie ,BKN,73
+Malcolm Delaney ,ATL,73
+Dante Exum,UTA,73
+Isaiah Whitehead ,BKN,73
+Jose Calderon ,LAL,73
+Marcelo Huertas ,LAL,73
+Raul Neto,UTA,73
+Cameron Payne,OKC,73
+Jerian Grant ,CHI,72
+Matthew Dellavedova ,MIL,72
+Michael Carter-Williams ,CHI,72
+Andrew Harrison ,MEM,72
+C.J. Watson,ORL,72
+Kris Dunn ,MIN,72
+Brian Roberts,CHA,72
+Terry Rozier,BOS,71
+Joseph Young,IND,71
+Toney Douglas ,MEM,71
+Ray McCallum,CHA,71
+Kay Felder ,CLE,70
+Tomas Satoransky ,WAS,70
+Jason Terry ,MIL,70
+Tyler Ulis,PHX,70
+Shabazz Napier,POR,70
+Briante Weber,GSW,70
+Ronnie Price,PHX,69
+Delon Wright,TOR,69
+Wade Baldwin ,MEM,68
+Tyler Ennis ,HOU,68
+Bobby Brown,HOU,68
+Fred Van Fleet,TOR,67
+Demetrius Jackson ,BOS,67
+Tim Quarterman ,POR,66
+Yogi Ferrell,DAL,66
+Semaj Christon,OKC,65
+#VALUE!,#VALUE!,65
+James Harden ,HOU,95
+DeMar DeRozan ,TOR,90
+Jimmy Butler ,CHI,89
+Klay Thompson ,GSW,89
+C.J. McCollum ,POR,86
+Dwyane Wade ,CHI,84
+Bradley Beal ,WAS,84
+Avery Bradley ,BOS,83
+Devin Booker ,PHX,83
+Eric Gordon ,HOU,81
+Khris Middleton,MIL,81
+J.J. Redick ,LAC,80
+Zach LaVine ,MIN,79
+Kentavious Caldwell-Pope,DET,79
+Victor Oladipo,OKC,79
+Dion Waiters ,MIA,79
+Rodney Hood ,UTA,79
+Lou Williams ,LAL,79
+Gary Harris ,DEN,78
+Evan Fournier,ORL,78
+Tony Allen,MEM,78
+Wesley Matthews ,DAL,77
+Tyler Johnson ,MIA,77
+Manu Ginobili ,SAS,77
+Will Barton ,DEN,77
+Sean Kilpatrick Jr. ,BKN,76
+Courtney Lee,NYK,76
+Danny Green,SAS,76
+J.R. Smith ,CLE,76
+Ian Clark ,GSW,76
+Leandro Barbosa ,PHX,76
+Jamal Crawford ,LAC,76
+Josh Richardson ,MIA,76
+Alec Burks ,UTA,76
+Seth Curry ,DAL,75
+Tim Hardaway Jr ,ATL,75
+Marco Belinelli ,CHA,75
+Norman Powell ,TOR,75
+Jodie Meeks ,ORL,75
+Allan Crabbe,POR,75
+Malcolm Brogdon ,MIL,74
+Gerald Henderson,PHI,74
+Garrett Temple,SAC,74
+Monta Ellis ,IND,74
+Jeremy Lamb,CHA,74
+Wayne Ellington ,MIA,74
+Troy Daniels ,MEM,74
+Iman Shumpert,CLE,74
+Kyle Korver ,CLE,74
+Buddy Hield ,NOP,74
+Nik Stauskas ,PHI,74
+Andre Roberson ,OKC,73
+E'Twaun Moore ,NOP,73
+Jonathan Simmons ,SAS,73
+Rodney Stuckey ,IND,73
+Arron Afflalo ,SAC,73
+Rodney McGruder ,MIA,73
+Caris LeVert ,BKN,72
+Justin Holiday ,NYK,72
+Gerald Green ,BOS,72
+Jamal Murray ,DEN,72
+Alex Abrines ,OKC,72
+Patrick McCaw ,GSW,72
+DeAndre Liggins ,CLE,72
+Rashad Vaughn ,MIL,72
+Marcus Thornton ,WAS,71
+Joe Harris ,BKN,71
+Ben McLemore ,SAC,70
+Isaiah Canaan ,CHI,70
+Darrun Hilliard ,DET,70
+Michael Gbinije ,DET,70
+Randy Foye ,BKN,69
+Mario Hezonja ,ORL,69
+Malik Beasley,DEN,69
+Malachi Richardson,SAC,69
+Alan Anderson ,LAC,68
+Pat Connaughton,POR,69
+Jordan McRae ,CLE,68
+Timothe Luwawu-Cabarrot ,PHI,68
+K.J. McDaniels,HOU,68
+Sasha Vujacic ,NYK,68
+Paul Zipser,CHI,68
+Lamar Patterson,ATL,68
+C.J. Wilcox,ORL,68
+James Young,BOS,67
+Sheldon McClellan ,WAS,67
+Bryn Forbes,SAS,65
+Ron Baker ,NYK,64
+LeBron James,CLE,96
+Kawhi Leonard ,SAS,95
+Kevin Durant ,GSW,95
+Giannis Antetokounmpo ,MIL,89
+Paul George ,IND,89
+Gordan Hayward ,UTA,87
+Carmelo Anthony ,NYK,86
+Harrison Barnes ,DAL,83
+Rudy Gay ,SAC,81
+Jae Crowder,BOS,81
+Andrew Wiggins ,MIN,81
+Otto Porter ,WAS,80
+Nicolas Batum ,CHA,80
+Tobias Harris ,DET,80
+Danilo Gallinari ,DEN,79
+Ben Simmons,PHI,79
+Tyreke Evans ,NOP,78
+James Johnson ,MIA,78
+Wilson Chandler ,DEN,78
+Joe Ingles ,UTA,78
+Andre Iguodala ,GSW,78
+Trevor Ariza,HOU,77
+Bojan Bogdanovic ,BKN,77
+Marcus Morris ,DET,77
+DeMarre Carroll ,TOR,77
+C.J. Miles ,IND,77
+Nick Young ,LAL,76
+T.J. Warren,PHX,76
+Michael Kidd-Gilchrist ,CHA,76
+Justise Winslow ,MIA,76
+Terrence Ross ,TOR,76
+Maurice Harkless ,POR,75
+Thabo Sefolosha,ATL,75
+Chandler Parsons ,MEM,75
+Shabazz Muhammad ,MIN,75
+Evan Turner ,POR,75
+Joe Johnson ,UTA,75
+Jeff Green ,ORL,75
+Luol Deng ,LAL,74
+Sam Dekker ,HOU,74
+Justin Anderson ,DAL,74
+Vince Carter,MEM,74
+Rondae Hollis-Jefferson ,BKN,74
+Doug McDermott,CHI,74
+Kent Bazemore ,ATL,74
+James Ennis ,MEM,74
+Quincy Pondexter,NOP,74
+Robert Covington ,PHI,73
+Tony Snell ,MIL,73
+P.J. Tucker ,PHX,73
+Derrick Williams,MIA,73
+Glenn Robinson III ,IND,73
+Al-Farouq Aminu ,POR,73
+Jaylen Brown ,BOS,73
+Richard Jefferson ,CLE,73
+Dorian Finney-Smith ,DAL,73
+Jerami Grant,OKC,73
+Omri Casspi ,SAC,72
+Kelly Oubre Jr. ,WAS,72
+Anthony Morrow ,OKC,72
+Matt Barnes ,SAC,72
+Wesley Johnson ,LAC,72
+Dante Cunningham ,NOP,72
+Corey Brewer ,HOU,72
+Brandon Ingram ,LAL,72
+Paul Pierce ,LAC,72
+Solomon Hill ,NOP,71
+Kyle Anderson ,SAS,71
+Mike Dunleavy ,ATL,71
+Lance Thomas ,NYK,71
+Brandon Rush ,MIN,71
+Taurean Prince,ATL,71
+Stanley Johnson ,DET,70
+Luke Babbitt ,MIA,70
+Mike Miller,DEN,70
+Reggie Bullock,DET,70
+Metta World Peace ,LAL,70
+Josh Huestis,OKC,69
+Jake Layman ,POR,69
+Anthony Brown,ORL,69
+James Jones,CLE,69
+Denzel Valentine ,CHI,68
+Kyle Singler ,OKC,68
+DeAndre Bembry ,ATL,68
+Georges Niang,IND,68
+Damjan Rudez ,ORL,67
+Danuel House,WAS,66
+Treveon Graham ,CHA,65
+Nicolas Brussino,DAL,66
+Bruno Caboclo,TOR,66
+Derrick Jones Jr.,PHX,64
+Anthony Davis ,NOP,94
+Kevin Love ,CLE,87
+Blake Griffin,LAC,87
+LaMarcus Aldridge ,SAS,86
+Draymond Green ,GSW,86
+Chris Bosh,MIA,86
+Paul Millsap ,ATL,85
+Kristaps Porzingis ,NYK,84
+Jabari Parker ,MIL,83
+Serge Ibaka ,ORL,80
+Zach Randolph,MEM,80
+Kenneth Faried ,DEN,79
+Taj Gibson ,CHI,79
+Dirk Nowitzki ,DAL,79
+Markieff Morris ,WAS,79
+Ersan Ilyasova ,PHI,78
+Julius Randle ,LAL,78
+Thaddeus Young ,IND,78
+Derrick Favors ,UTA,78
+Jon Leuer ,DET,77
+Trevor Booker ,BKN,77
+Ryan Anderson ,HOU,77
+Dwight Powell ,DAL,77
+Larry Nance Jr ,LAL,77
+Terrence Jones ,NOP,76
+Luc Mbah a Moute ,LAC,76
+Michael Beasley ,MIL,76
+Aaron Gordon,ORL,76
+Nikola Mirotic,CHI,76
+Marvin Williams ,CHA,75
+JaMychal Green ,MEM,75
+Montrezl Harrell ,HOU,75
+David Lee ,SAS,75
+David West,GSW,75
+Dario Saric ,PHI,75
+Mirza Teletovic ,MIL,75
+Amir Johnson ,BOS,74
+Willie Reed ,MIA,74
+Brandon Bass,LAC,74
+Channing Frye,CLE,74
+Luis Scola,BKN,74
+Kris Humphries ,ATL,74
+Mindaugas Kuzminskas ,NYK,74
+Patrick Patterson ,TOR,74
+Donatas Motiejunas,NOP,74
+Marquese Chriss ,PHX,73
+Thomas Robinson,LAL,73
+Richaun Holmes ,PHI,73
+Darrell Arthur ,DEN,73
+Bobby Portis ,CHI,73
+Trey Lyles ,UTA,73
+Anthony Tolliver ,SAC,73
+Jared Dudley ,PHX,73
+Jonas Jerebko,BOS,73
+Boris Diaw ,UTA,73
+Pascal Siakam ,TOR,72
+Kevon Looney ,GSW,72
+Nemanja Bjellica ,MIN,72
+Josh McRoberts,MIA,72
+Mike Scott ,ATL,72
+Quincy Acy,BKN,72
+Nick Collison,OKC,72
+Davis Bertans ,SAS,71
+Meyers Leonard ,POR,71
+Alan Williams ,PHX,71
+Adrien Payne ,MIN,71
+Jordan Mickey,BOS,71
+Deyonta Davis ,MEM,71
+Noah Vonleh,POR,70
+Lavoy Allen ,IND,70
+Jarell Martin,MEM,70
+Udonis Haslem,MIA,70
+Chris McCullough ,BKN,70
+Juancho Hernangomez ,DEN,69
+Andrew Nicholson ,WAS,69
+Maurice N'dour,NYK,69
+Brice Johnson,LAC,69
+Christian Wood,CHA,69
+James Michael McAdoo ,GSW,67
+Johnny O'Bryant,DEN,67
+Joel Bolomboy,UTA,67
+Chinanu Onuaku,HOU,67
+Rakeem Christmas,IND,66
+Kyle Wiltjer,HOU,65
+Daniel Ochefu,WAS,65
+DeMarcus Cousins ,SAC,93
+Marc Gasol ,MEM,89
+Karl-Anthony Towns,MIN,88
+Joel Embiid ,PHI,86
+Rudy Gobert ,UTA,86
+Andre Drummond ,DET,86
+DeAndre Jordan ,LAC,86
+Hassan Whiteside,MIA,86
+Nikola Jokic ,DEN,85
+Dwight Howard ,ATL,84
+Al Horford ,BOS,84
+Brook Lopez ,BKN,83
+Myles Turner ,IND,83
+Pau Gasol ,SAS,82
+Jonas Valanciunas ,TOR,81
+Steven Adams,OKC,81
+Nikola Vucevic,ORL,80
+Enes Kanter ,OKC,80
+Clint Capela ,HOU,79
+Mason Plumlee ,POR,79
+Tristan Thompson ,CLE,79
+Greg Monroe,MIL,79
+Marcin Gortat ,WAS,78
+Nerlens Noel ,PHI,78
+Cody Zeller ,CHA,77
+Tyson Chandler ,PHX,77
+Gorgui Dieng,MIN,77
+Marreese Speights ,LAC,77
+Al Jefferson ,IND,77
+Jared Sullinger,TOR,77
+Zaza Pachulia,GSW,76
+Joakim Noah ,NYK,76
+Robin Lopez ,CHI,76
+Kyle O'Quinn,NYK,76
+Nene ,HOU,76
+Jusuf Nurkic ,DEN,76
+Ian Mahinmi,WAS,76
+Festus Ezeli,POR,76
+Brandan Wright,MEM,76
+John Henson ,MIL,75
+Willy Hernangomez ,NYK,75
+Jahlil Okafor ,PHI,75
+Alex Len,PHX,75
+Spencer Hawes ,MIL,75
+Jeff Withey ,UTA,75
+Tiago Splitter,ATL,75
+Timofey Mozgov ,LAL,74
+Andrew Bogut ,DAL,74
+Tarik Black ,LAL,74
+Mike Muscala ,ATL,74
+Kelly Olynyk ,BOS,74
+Salah Mejri,DAL,74
+Frank Kaminsky ,CHA,74
+Nikola Pekovic,MIN,74
+Kosta Koufos ,SAC,73
+JaVale McGee ,GSW,73
+Dewayne Dedmon ,SAS,73
+Tyler Zeller ,BOS,73
+Roy Hibbert,MIL,73
+Joffrey Lauvergne ,OKC,73
+Bismack Biyombo ,ORL,73
+Cole Aldrich ,MIN,73
+Chris Andersen,CLE,73
+Lucas Nogueira ,TOR,72
+Cristiano Felicio ,CHI,72
+Jason Smith ,WAS,72
+Ed Davis ,POR,72
+Aron Baynes ,DET,72
+Boban Marjanovic ,DET,72
+Domantas Sabonis ,OKC,71
+Willie Cauley-Stein ,SAC,71
+Omer Asik ,NOP,71
+Jordan Hill ,MIN,71
+Thon Maker,MIL,71
+Kevin Seraphin ,IND,71
+Alexis Ajinca ,NOP,71
+Justin Hamilton ,BKN,70
+Ivica Zubac ,LAL,70
+Dragan Bender ,PHX,70
+Jakob Poeltl,TOR,71
+Georgios Papagiannis,SAC,70
+Skal Labissiere,SAC,70
+Henry Ellenson,DET,70
+Miles Plumlee ,CHA,69
+A.J. Hammons ,DAL,68
+Damian Jones,GSW,68
+Stephen Zimmerman,ORL,67
+Cheick Diallo,NOP,67
+Diamond Stone,LAC,66
+Joel Anthony,SAS,65
+Marshall Plumlee,NYK,65
