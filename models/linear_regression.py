@@ -3,13 +3,14 @@
 
 import numpy as np
 from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import cross_val_score
-from sklearn.metrics import make_scorer, mean_squared_error, mean_absolute_error
-from sklearn.model_selection import KFold, train_test_split
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib
-matplotlib.style.use('ggplot')
 from utils import *
 
-%matplotlib inline
+
+train = np.load('train.npy') 
+X = train[0:,0:-1]
+y = train[:, -1]
+
+baseline_linreg = LinearRegression()
+
+print "Average MAE (Linear Regression): ", model_cross_validation(LinearRegression(), X=X, y=y, scoring_func=mae_scorer_cv, cv=10)
+# Average MAE 3.618
