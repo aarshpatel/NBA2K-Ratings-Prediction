@@ -44,10 +44,10 @@ class MeanBaselineModel(BaseEstimator, ClassifierMixin):
         return absolute_error(y, predictions)
 
 # Loading in training data
-train = np.load('train.npy') 
+train = np.load('../models/numpy_data/train.npy') 
 X = train[0:,0:-1]
 y = train[:, -1]
 
   
-print "Average MAE: ", model_cross_validation(estimator=MeanBaselineModel(), X=X, y=y, scoring_func=mae_scorer_cv, cv=10)
+print "Average MAE (MeanBaselineModel): ", model_cross_validation(estimator=MeanBaselineModel(), X=X, y=y, scoring_func=mae_scorer_cv, cv=10)
 # Average MAE => 6.28727070701
