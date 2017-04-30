@@ -6,15 +6,15 @@ from sklearn.linear_model import Ridge
 from utils import *
 
 
-train = np.load('../data/numpy_data/train.npy')
+train = np.load('../../data/numpy_data/train.npy')
 
 X = train[0:,0:-1]
 y = train[:, -1]
 
-X_train = np.load('../data/numpy_data/X_train.npy')
-y_train = np.load('../data/numpy_data/y_train.npy')
-X_test = np.load('../data/numpy_data/X_test.npy')
-y_test = np.load('../data/numpy_data/y_test.npy')
+X_train = np.load('../../data/numpy_data/X_train.npy')
+y_train = np.load('../../data/numpy_data/y_train.npy')
+X_test = np.load('../../data/numpy_data/X_test.npy')
+y_test = np.load('../../data/numpy_data/y_test.npy')
 
 
 ridge_parameters = {
