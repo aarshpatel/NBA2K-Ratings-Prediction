@@ -10,6 +10,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.style.use('ggplot')
-from Utils import *
+from utils import *
 
 %matplotlib inline
