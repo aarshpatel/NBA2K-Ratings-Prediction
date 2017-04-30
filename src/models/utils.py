@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 """ 
 Implementation of the Utils file. This script contains all of the code that will be
 used in multiple scripts
 """
->>>>>>> 2d4789de264f52a9498cc0f9fda7e7b469b65497
 
 import numpy as np
 
@@ -35,7 +32,7 @@ def model_cross_validation(estimator, X, y, scoring_func, cv):
 	return np.mean(cross_val_score(estimator=estimator, X=X, y=y, scoring=scoring_func, cv=cv))
 
 def get_best_estimator(estimator, step, cv, scoring, parameters, X_train, y_train):
-    clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, n_jobs=-1, verbose=10)
+    clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, n_jobs=-1)
     clf_mae.fit(X_train, y_train)
     return clf_mae.best_estimator_
 	
