@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from utils import *
 
 
-train = np.load('train.npy') 
+train = np.load('../models/numpy_data/train.npy') 
 X = train[0:,0:-1]
 y = train[:, -1]
 
