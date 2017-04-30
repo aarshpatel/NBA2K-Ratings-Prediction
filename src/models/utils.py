@@ -9,6 +9,16 @@ from sklearn.metrics import make_scorer, mean_squared_error, mean_absolute_error
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import GridSearchCV
 
+train = np.load('../../data/numpy_data/train.npy')
+
+X = train[0:,0:-1]
+y = train[:, -1]
+
+X_train = np.load('../../data/numpy_data/X_train.npy')
+y_train = np.load('../../data/numpy_data/y_train.npy')
+X_test = np.load('../../data/numpy_data/X_test.npy')
+y_test = np.load('../../data/numpy_data/y_test.npy')
+
 def root_mean_squared(act_y, pred_y):
     """ Root Mean Squared Error """
     rmse = np.sqrt(mean_squared_error(act_y, pred_y))
@@ -32,7 +42,7 @@ def model_cross_validation(estimator, X, y, scoring_func, cv):
 	return np.mean(cross_val_score(estimator=estimator, X=X, y=y, scoring=scoring_func, cv=cv))
 
 def get_best_estimator(estimator, step, cv, scoring, parameters, X_train, y_train):
-    clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, n_jobs=-1)
+    clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, n_jobs=-1, verbose=10)
     clf_mae.fit(X_train, y_train)
     return clf_mae.best_estimator_
 	
