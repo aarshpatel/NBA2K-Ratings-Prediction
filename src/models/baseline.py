@@ -44,7 +44,7 @@ class MeanBaselineModel(BaseEstimator, ClassifierMixin):
         return absolute_error(y, predictions)
 
 # Loading in training data
-train = np.load('../models/numpy_data/train.npy') 
+train = np.load('../../data/numpy_data/train.npy') 
 X = train[0:,0:-1]
 y = train[:, -1]
 
