@@ -16,8 +16,8 @@ train_offensive = np.load('../../data/numpy_data/train_offensive.npy')
 train_defensive = np.load('../../data/numpy_data/train_defensive.npy')
 
 # All features of the training data
-X = train[0:,0:-1]
-y = train[:, -1]
+X_all = train[0:,0:-1]
+y_all = train[:, -1]
 
 # Load the X training data with all features
 X_train = np.load('../../data/numpy_data/X_train.npy')
@@ -64,3 +64,8 @@ def get_best_estimator(estimator, step, cv, scoring, parameters, X_train, y_trai
     clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, n_jobs=-1, verbose=10)
     clf_mae.fit(X_train, y_train)
     return clf_mae.best_estimator_
+
+
+def get_model_mae(estimator, X, y, X_data, y_data, param_grid):
+    optimal_model = get_best_estimator(estimator, 1, 10, mae_scorer_gs, param_grid, X_data, y_data)
+    return model_cross_validation(optimal_model, X, y, mae_scorer_cv, 10)
