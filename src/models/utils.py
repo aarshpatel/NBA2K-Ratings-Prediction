@@ -9,15 +9,32 @@ from sklearn.metrics import make_scorer, mean_squared_error, mean_absolute_error
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import GridSearchCV
 
+# Loads all of the training data
 train = np.load('../../data/numpy_data/train.npy')
+# Split the training data into just offensive and defensive data
+train_offensive = np.load('../../data/numpy_data/train_offensive.npy')
+train_defensive = np.load('../../data/numpy_data/train_defensive.npy')
 
+# All features of the training data
 X = train[0:,0:-1]
 y = train[:, -1]
 
+# Load the X training data with all features
 X_train = np.load('../../data/numpy_data/X_train.npy')
+# Load the X training data with offensive and defensive data splits
+X_train_offensive = np.load('../../data/numpy_data/X_train_offensive.npy')
+X_train_defensive = np.load('../../data/numpy_data/X_train_defensive.npy')
+# Loads the y training data
 y_train = np.load('../../data/numpy_data/y_train.npy')
+
+# Load the X testing data with all features
 X_test = np.load('../../data/numpy_data/X_test.npy')
+# Load the X testing data with offensive and defensive data splits
+X_test_offensive = np.load('../../data/numpy_data/X_test_offensive.npy')
+X_test_defensive = np.load('../../data/numpy_data/X_test_defensive.npy')
+# Load the y testing data
 y_test = np.load('../../data/numpy_data/y_test.npy')
+
 
 def root_mean_squared(act_y, pred_y):
     """ Root Mean Squared Error """
@@ -37,12 +54,13 @@ mae_scorer_gs = make_scorer(absolute_error, greater_is_better=False)
 rmse_scorer_cv = make_scorer(root_mean_squared)
 mae_scorer_cv = make_scorer(absolute_error)
 
+
 def model_cross_validation(estimator, X, y, scoring_func, cv):
-	""" Returns the mean of all cross validation scores """
-	return np.mean(cross_val_score(estimator=estimator, X=X, y=y, scoring=scoring_func, cv=cv))
+    """ Returns the mean of all cross validation scores """
+    return np.mean(cross_val_score(estimator=estimator, X=X, y=y, scoring=scoring_func, cv=cv))
+
 
 def get_best_estimator(estimator, step, cv, scoring, parameters, X_train, y_train):
     clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, n_jobs=-1, verbose=10)
     clf_mae.fit(X_train, y_train)
     return clf_mae.best_estimator_
-	
