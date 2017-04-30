@@ -12,7 +12,6 @@ import numpy as np
 import pandas as pd
 
 
-
 class MeanBaselineModel(BaseEstimator, ClassifierMixin):  
     """ Baseline Model - Predicts the mean of the ratings """
 
@@ -47,8 +46,6 @@ class MeanBaselineModel(BaseEstimator, ClassifierMixin):
         """
 
         predictions = self.predict(X)
-        print("Predictions Shape: ", predictions.shape)
-        print("X shape: ", X.shape)
         return self.absolute_error(y, predictions)
 
 # Loading in training data
@@ -69,3 +66,5 @@ def absolute_error(act_y, pred_y):
 
 mae_scorer_cv = make_scorer(absolute_error)
 print "Average MAE: ", np.mean(cross_val_score(estimator=MeanBaselineModel(), X=X, y=y, scoring=mae_scorer_cv, cv=10))
+
+# Average MAE => 6.28727070701
