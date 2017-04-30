@@ -26,6 +26,9 @@ ridge_parameters = {
 
 ridge = Ridge()
 best_ridge = get_best_estimator(ridge, 1, 10, mae_scorer_gs, ridge_parameters, X_train, y_train)
-print model_cross_validation(best_ridge, X, y, mae_scorer_cv, 10)
+
+print "Average MAE (Ridge Regression): ", model_cross_validation(best_ridge, X, y, mae_scorer_cv, 10)
+
+3.6038503309
 
 
