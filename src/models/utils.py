@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 """ 
 Implementation of the Utils file. This script contains all of the code that will be
 used in multiple scripts
 """
->>>>>>> 2d4789de264f52a9498cc0f9fda7e7b469b65497
 
 import numpy as np
 
