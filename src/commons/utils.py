@@ -61,7 +61,7 @@ def model_cross_validation(estimator, X, y, scoring_func, cv):
 
 
 def get_best_estimator(estimator, step, cv, scoring, parameters, X_train, y_train):
-    clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, n_jobs=-1, verbose=10)
+    clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, verbose=10)
     clf_mae.fit(X_train, y_train)
     return clf_mae.best_estimator_
 
