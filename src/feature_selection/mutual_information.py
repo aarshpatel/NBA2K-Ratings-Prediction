@@ -5,7 +5,7 @@ ratings and get a better intuition on the relationship between
 nba statistics and 2k player ratings
 """
 
-from sklearn.feature_selection import mutual_info_regression
+from sklearn.feature_selection import mutual_info_regression, SelectKBest
 import pandas as pd
 import numpy as np
 import operator
