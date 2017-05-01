@@ -4,7 +4,8 @@ runs different model on the new preprocessed data with the
 best features according to mutual_information 
 """
 
-
+import sys
+sys.path.append('../../src/')
 from sklearn.feature_selection import mutual_info_regression, SelectKBest
 from sklearn.metrics import make_scorer, mean_squared_error, mean_absolute_error
 from sklearn.grid_search import GridSearchCV
@@ -13,16 +14,18 @@ from sklearn.pipeline import Pipeline
 import pandas as pd
 import numpy as np
 import operator
+from commons.utils import *
 
-train = np.load('../../data/numpy_data/train.npy') 
-X = train[0:,0:-1]
-y = train[:, -1]
-
-
-X_train = np.load('../../data/numpy_data/X_train.npy')
-y_train = np.load('../../data/numpy_data/y_train.npy')
-X_test = np.load('../../data/numpy_data/X_test.npy')
-y_test = np.load('../../data/numpy_data/y_test.npy')
+#
+# train = np.load('../../data/numpy_data/train.npy')
+# X = train[0:,0:-1]
+# y = train[:, -1]
+#
+#
+# X_train = np.load('../../data/numpy_data/X_train.npy')
+# y_train = np.load('../../data/numpy_data/y_train.npy')
+# X_test = np.load('../../data/numpy_data/X_test.npy')
+# y_test = np.load('../../data/numpy_data/y_test.npy')
 
 def absolute_error(act_y, pred_y):
     """ Mean Absolute Error"""

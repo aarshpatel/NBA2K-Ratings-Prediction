@@ -1,9 +1,11 @@
 """ Experimenting with Linear Regression on 2k dataset """
 
 
+import sys
+sys.path.append('../../src/')
 import numpy as np
 from sklearn.linear_model import LinearRegression
-from utils import *
+from commons.utils import *
 
 baseline_linreg = LinearRegression()
 

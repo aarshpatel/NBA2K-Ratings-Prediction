@@ -1,8 +1,10 @@
 """ Experimenting with Ridge Regression on 2k dataset """
 
+import sys
+sys.path.append('../../src/')
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
-from utils import *
+from commons.utils import *
 
 random_forest_params = {
     'n_estimators': [10, 50, 100, 200, 500],

@@ -4,12 +4,14 @@ The baseline model just predicts the mean of the player ratings. A good baseline
 gives us a sense of what we are trying to acheive
 """
 
+import sys
+sys.path.append('../../src/')
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.metrics import make_scorer, mean_squared_error, mean_absolute_error
 from sklearn.model_selection import cross_val_score
 import numpy as np
 import pandas as pd
-from utils import *
+from commons.utils import *
 
 
 class MeanBaselineModel(BaseEstimator, ClassifierMixin):  
