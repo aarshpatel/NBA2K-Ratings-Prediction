@@ -4,18 +4,23 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from utils import *
 
-param_random_forest = {
-    'n_estimators': [10, 50, 100, 200],
+random_forest_params = {
+    'n_estimators': [10, 50, 100, 200, 500],
     'max_depth': [5, 8, 15, 25, 30, None],
-    'min_samples_split': [2, 5, 10, 15, 50],
+    'min_samples_split': [2, 5, 10, 15, 30],
     'min_samples_leaf': [1, 2, 5, 10],
-    'max_features': ['log2', 'sqrt', None]
+    'max_features': ['log2', 'sqrt', None],
+    'n_jobs': [-1]
 }
 
-random_forest = RandomForestRegressor()
-best_forest = get_best_estimator(random_forest, 1, 10, mae_scorer_gs, param_random_forest, X_train, y_train)
-
-print "Average MAE (Random Forest Regression): ", model_cross_validation(best_forest, X, y, mae_scorer_cv, 10)
-
+all_features_mae = get_model_mae(RandomForestRegressor(), X_all, y_all, X_train, y_train, random_forest_params)
+offensive_features_mae = get_model_mae(RandomForestRegressor(), train_offensive, y_all, X_train_offensive, y_train, random_forest_params)
+defensive_features_mae = get_model_mae(RandomForestRegressor(), train_defensive, y_all, X_train_defensive, y_train, random_forest_params)
 
 
+print "Average MAE with all Features (Random Forest Regression): ", all_features_mae
+# 3.61590050102
+print "Average MAE with only offensive features (Random Forest Regression): ", offensive_features_mae
+# 3.66233785138
+print "Average MAE with only defensive features (Random Forest Regression): ", defensive_features_mae
+# 3.64111572297

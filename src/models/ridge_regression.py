@@ -4,7 +4,6 @@ import numpy as np
 from sklearn.linear_model import Ridge
 from utils import *
 
-
 ridge_parameters = {
     'alpha': [0.01, 0.1, 1.0, 10, 100],
     'normalize': [True, False],
@@ -12,9 +11,19 @@ ridge_parameters = {
 }
 
 
-ridge = Ridge()
-best_ridge = get_best_estimator(ridge, 1, 10, mae_scorer_gs, ridge_parameters, X_train, y_train)
+all_features_mae = get_model_mae(Ridge(), X_all, y_all, X_train, y_train, ridge_parameters)
+offensive_features_mae = get_model_mae(Ridge(), train_offensive, y_all, X_train_offensive, y_train, ridge_parameters)
+defensive_features_mae = get_model_mae(Ridge(), train_defensive, y_all, X_train_defensive, y_train, ridge_parameters)
 
-print "Average MAE (Ridge Regression): ", model_cross_validation(best_ridge, X, y, mae_scorer_cv, 10)
+
+print "Average MAE with all Features (Ridge Regression): ", all_features_mae
+# 3.6038503309
+print "Average MAE with only offensive features (Ridge Regression): ", offensive_features_mae
+# 3.63253090173
+print "Average MAE with only defensive features (Ridge Regression): ", defensive_features_mae
+# 3.67993687709
+
+
+
 
 

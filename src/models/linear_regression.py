@@ -7,5 +7,5 @@ from utils import *
 
 baseline_linreg = LinearRegression()
 
-print "Average MAE (Linear Regression): ", model_cross_validation(LinearRegression(), X=X, y=y, scoring_func=mae_scorer_cv, cv=10)
+print "Average MAE (Linear Regression): ", model_cross_validation(LinearRegression(), X=X_all, y=y_all, scoring_func=mae_scorer_cv, cv=10)
 # Average MAE 3.618
