@@ -10,7 +10,6 @@ from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.metrics import make_scorer, mean_squared_error, mean_absolute_error
 from sklearn.model_selection import cross_val_score
 import numpy as np
-import pandas as pd
 from commons.utils import *
 
 
@@ -45,10 +44,14 @@ class MeanBaselineModel(BaseEstimator, ClassifierMixin):
         predictions = self.predict(X)
         return absolute_error(y, predictions)
 
-  
-print "Average MAE with all Features (MeanBaselineModel): ", model_cross_validation(estimator=MeanBaselineModel(), X=X_all, y=y_all, scoring_func=mae_scorer_cv, cv=10)
-# Average MAE => 6.28727070701
-print "Average MAE with only offensive features (MeanBaselineMode): ", model_cross_validation(estimator=MeanBaselineModel(), X=train_offensive, y=y_all, scoring_func=mae_scorer_cv, cv=10)
-# Average MAE => 6.28727070701
-print "Average MAE with only defensive features (MeanBaselineMode): ", model_cross_validation(estimator=MeanBaselineModel(), X=train_defensive, y=y_all, scoring_func=mae_scorer_cv, cv=10)
-# Average MAE => 6.28727070701
+
+def run_baseline_offensive_defensive_features():
+    print "Average MAE with all Features (MeanBaselineModel): ", model_cross_validation(estimator=MeanBaselineModel(), X=X_all, y=y_all, scoring_func=mae_scorer_cv, cv=10)
+    # Average MAE => 6.28727070701
+    print "Average MAE with only offensive features (MeanBaselineMode): ", model_cross_validation(estimator=MeanBaselineModel(), X=train_offensive, y=y_all, scoring_func=mae_scorer_cv, cv=10)
+    # Average MAE => 6.28727070701
+    print "Average MAE with only defensive features (MeanBaselineMode): ", model_cross_validation(estimator=MeanBaselineModel(), X=train_defensive, y=y_all, scoring_func=mae_scorer_cv, cv=10)
+    # Average MAE => 6.28727070701
+
+
+# run_baseline_offensive_defensive_features()

@@ -20,9 +20,10 @@ offensive_features_mae = get_model_mae(RandomForestRegressor(), train_offensive,
 defensive_features_mae = get_model_mae(RandomForestRegressor(), train_defensive, y_all, X_train_defensive, y_train, random_forest_params)
 
 
-print "Average MAE with all Features (Random Forest Regression): ", all_features_mae
-# 3.61590050102
-print "Average MAE with only offensive features (Random Forest Regression): ", offensive_features_mae
-# 3.66233785138
-print "Average MAE with only defensive features (Random Forest Regression): ", defensive_features_mae
-# 3.64111572297
+def run_forest_offensive_defensive_features():
+    print "Average MAE with all Features (Random Forest Regression): ", all_features_mae
+    # 3.61590050102
+    print "Average MAE with only offensive features (Random Forest Regression): ", offensive_features_mae
+    # 3.66233785138
+    print "Average MAE with only defensive features (Random Forest Regression): ", defensive_features_mae
+    # 3.64111572297
