@@ -19,8 +19,8 @@ defensive_features_mae = get_model_mae(RandomForestRegressor(), train_defensive,
 
 
 print "Average MAE with all Features (Random Forest Regression): ", all_features_mae
+# 3.61590050102
 print "Average MAE with only offensive features (Random Forest Regression): ", offensive_features_mae
+# 3.66233785138
 print "Average MAE with only defensive features (Random Forest Regression): ", defensive_features_mae
-
-
-
+# 3.64111572297

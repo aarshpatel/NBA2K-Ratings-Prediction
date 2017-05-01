@@ -17,8 +17,11 @@ defensive_features_mae = get_model_mae(Ridge(), train_defensive, y_all, X_train_
 
 
 print "Average MAE with all Features (Ridge Regression): ", all_features_mae
+# 3.6038503309
 print "Average MAE with only offensive features (Ridge Regression): ", offensive_features_mae
+# 3.63253090173
 print "Average MAE with only defensive features (Ridge Regression): ", defensive_features_mae
+# 3.67993687709
 
 
 
