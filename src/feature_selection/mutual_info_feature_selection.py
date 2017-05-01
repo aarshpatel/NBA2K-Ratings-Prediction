@@ -10,36 +10,21 @@ from sklearn.feature_selection import mutual_info_regression, SelectKBest
 from sklearn.metrics import make_scorer, mean_squared_error, mean_absolute_error
 from sklearn.grid_search import GridSearchCV
 from sklearn.linear_model import LinearRegression, Ridge
+from sklearn.kernel_ridge import KernelRidge
 from sklearn.pipeline import Pipeline
 import pandas as pd
 import numpy as np
 import operator
+
 from commons.utils import *
-
-#
-# train = np.load('../../data/numpy_data/train.npy')
-# X = train[0:,0:-1]
-# y = train[:, -1]
-#
-#
-# X_train = np.load('../../data/numpy_data/X_train.npy')
-# y_train = np.load('../../data/numpy_data/y_train.npy')
-# X_test = np.load('../../data/numpy_data/X_test.npy')
-# y_test = np.load('../../data/numpy_data/y_test.npy')
-
-def absolute_error(act_y, pred_y):
-    """ Mean Absolute Error"""
-    mae = mean_absolute_error(act_y, pred_y)
-    return mae
-
-mae_scorer_gs = make_scorer(absolute_error, greater_is_better=False)
-
 
 def feature_selection_with_mutual_info(estimator, parameters):
     """ 
     Builds a pipeline using SelectKBest and a regression
     estimator and returns the test MAE for the model 
     """
+    
+    print("Peforming feature selection using mutual information...")
 
     mutual_info_fs = SelectKBest(mutual_info_regression)
 
@@ -48,7 +33,7 @@ def feature_selection_with_mutual_info(estimator, parameters):
             ('estimator', estimator)])
 
 
-    print("Performing GridSearchCV...")
+    print("Performing GridSearchCV on {0}...".format(estimator))
     cv = GridSearchCV(pipeline, param_grid=parameters, scoring=mae_scorer_gs, cv=3, n_jobs=-1)
     cv.fit(X_train, y_train)
 
@@ -60,8 +45,9 @@ def feature_selection_with_mutual_info(estimator, parameters):
     return absolute_error(y_test, predictions)
 
 print "LR: ", feature_selection_with_mutual_info(LinearRegression(), parameters = { "feature_selection__k": range(1, 49) })
-# print("\n")
-print "Ridge: ", feature_selection_with_mutual_info(Ridge(), parameters = {
-        "feature_selection__k": range(1, 49)
-        # "estimator__alpha": [0, .01, .1, 1, 10]
-})
+print "Kernel Ridge: ", feature_selection_with_mutual_info(KernelRidge(), parameters={"feature_selection__k": range(1, 49)})
+
+# print "Ridge: ", feature_selection_with_mutual_info(Ridge(), parameters = {
+#         "feature_selection__k": range(1, 49)
+#         # "estimator__alpha": [0, .01, .1, 1, 10]
+ })

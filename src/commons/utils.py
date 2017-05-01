@@ -61,11 +61,17 @@ def model_cross_validation(estimator, X, y, scoring_func, cv):
 
 
 def get_best_estimator(estimator, step, cv, scoring, parameters, X_train, y_train):
+    """ Performs hyperparameter optimization for an estimator """
     clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, verbose=10)
     clf_mae.fit(X_train, y_train)
     return clf_mae.best_estimator_
 
 
 def get_model_mae(estimator, X, y, X_data, y_data, param_grid):
+    """ 
+    Performs hyperparmeter optimization and then evaluates the best model 
+    using K-Fold Cross Validation to get a MAE estimate.
+    """
+
     optimal_model = get_best_estimator(estimator, 1, 10, mae_scorer_gs, param_grid, X_data, y_data)
     return model_cross_validation(optimal_model, X, y, mae_scorer_cv, 10)
