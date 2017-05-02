@@ -72,15 +72,6 @@ def model_cross_validation(estimator, X, y, scoring_func, cv):
     """ Returns the mean of all cross validation scores """
     return np.mean(cross_val_score(estimator=estimator, X=X, y=y, scoring=scoring_func, cv=cv))
 
-def get_p_value(estimator, X_train, y_train):
-
-    sse = np.sum((estimator.predict(X_train) - y_train) ** 2, axis=0) / float(X_train.shape[0] - X_train.shape[1])
-    se = np.array([np.sqrt(np.diagonal(sse * np.linalg.inv(np.dot(X_train.T, X_train))))])
-
-    t = estimator.coef_ / se
-    p = 2 * (1 - stats.t.cdf(np.abs(t), y_train.shape[0] - X_train.shape[1]))
-
-    return p
 
 def get_model_mae(estimator, X, y, X_train, y_train, X_test, y_test, param_grid):
     """ 
@@ -91,6 +82,4 @@ def get_model_mae(estimator, X, y, X_train, y_train, X_test, y_test, param_grid)
 
     optimal.feature_selection_and_hyperparameter_optimization(X_train, y_train, X_test, y_test)
     optimal_model = optimal.best_estimator
-    # print optimal_model.named_steps['estimator']
-    # print "p value: ", get_p_value(optimal_model.named_steps['estimator'], X_train, y_train)
     return model_cross_validation(optimal_model, X, y, mae_scorer_cv, 10)

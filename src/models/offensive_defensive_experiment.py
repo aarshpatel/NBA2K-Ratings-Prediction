@@ -52,36 +52,30 @@ def run_forest_regression_defensive_features():
     return get_model_mae(RandomForestRegressor(), train_defensive, y_all, X_train_defensive, y_train, X_test_defensive, y_test, random_forest_params)
 
 
-run_ridge_regression_all_features()
-run_ridge_regression_offensive_features()
-run_ridge_regression_defensive_features()
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
+handler = logging.FileHandler("../experiment_logs/offensive_defensive_all_features_experiment.log")
+handler.setLevel(logging.INFO)
 
-# logger = logging.getLogger(__name__)
-# logger.setLevel(logging.INFO)
+logger.addHandler(handler)
 
-# handler = logging.FileHandler("../experiment_logs/offensive_defensive_all_features_experiment.log")
-# handler.setLevel(logging.INFO)
+logger.info("Running All Features vs. Offensive Features vs. Defensive Features Experiment:")
 
-# logger.addHandler(handler)
+logger.info("    ==> Baseline Model")
+logger.info("        Baseline Model: Average MAE with offensive features: {0}".format(run_baseline_offensive_features()))
+logger.info("        Baseline Model: Average MAE with defensive features: {0}".format(run_baseline_defensive_features()))
 
+logger.info("    ==> Linear Regression")
+logger.info("        Linear Regression: Average MAE with offensive features: {0}".format(run_linear_regression_offensive_features()))
+logger.info("        Linear Regression: Average MAE with defensive features: {0}".format(run_linear_regression_defensive_features()))
 
-# logger.info("Running All Features vs. Offensive Features vs. Defensive Features Experiment:")
+logger.info("    ==> Ridge Regression")
+logger.info("        Ridge Regression: Average MAE with offensive features: {0}".format(run_ridge_regression_offensive_features()))
+logger.info("        Ridge Regression: Average MAE with defensive features: {0}".format(run_ridge_regression_defensive_features()))
 
-# logger.info("    ==> Baseline Model")
-# logger.info("        Baseline Model: Average MAE with offensive features: {0}".format(run_baseline_offensive_features()))
-# logger.info("        Baseline Model: Average MAE with defensive features: {0}".format(run_baseline_defensive_features()))
-
-# logger.info("    ==> Linear Regression")
-# logger.info("        Linear Regression: Average MAE with offensive features: {0}".format(run_linear_regression_offensive_features()))
-# logger.info("        Linear Regression: Average MAE with defensive features: {0}".format(run_linear_regression_defensive_features()))
-
-# logger.info("    ==> Ridge Regression")
-# logger.info("        Ridge Regression: Average MAE with offensive features: {0}".format(run_ridge_regression_offensive_features()))
-# logger.info("        Ridge Regression: Average MAE with defensive features: {0}".format(run_ridge_regression_defensive_features()))
-
-# logger.info("    ==> Random Forest Regression")
-# logger.info("        Random Forest Regression: Average MAE with offensive features: {0}".format(run_forest_regression_offensive_features()))
-# logger.info("        Random Forest Regression: Average MAE with defensive features: {0}".format(run_forest_regression_defensive_features()))
+logger.info("    ==> Random Forest Regression")
+logger.info("        Random Forest Regression: Average MAE with offensive features: {0}".format(run_forest_regression_offensive_features()))
+logger.info("        Random Forest Regression: Average MAE with defensive features: {0}".format(run_forest_regression_defensive_features()))
 
 
