@@ -1,3 +1,9 @@
+'''
+This class is an experiment for the regular vs advanced stats data split
+Each of the models is fit with a subset of the data (regular and advanced)
+Each of these methods then returns a MAE score
+'''
+
 import logging
 import sys
 sys.path.append('../../src/')
