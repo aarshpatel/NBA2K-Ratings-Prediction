@@ -36,6 +36,14 @@ X_test_defensive = np.load('../../data/numpy_data/X_test_defensive.npy')
 y_test = np.load('../../data/numpy_data/y_test.npy')
 
 
+# Load in the heldout test data
+test = np.load('../../data/numpy_data/test.npy')
+
+
+# All features of the training data
+test_all_X = test[0:,0:-1]
+test_all_y = test[:, -1]
+
 def root_mean_squared(act_y, pred_y):
     """ Root Mean Squared Error """
     rmse = np.sqrt(mean_squared_error(act_y, pred_y))

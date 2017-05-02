@@ -1,0 +1,4 @@
+Mean Baseline Model: Average MAE with all features: 6.28727070701
+Linear Regression Model: Average MAE with all features: 3.61816601526
+Ridge Regression Model: Average MAE with all features: 3.60782445792
+Random Forest Regressor Model: Average MAE with all features: 3.8435930358

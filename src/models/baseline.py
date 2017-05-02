@@ -13,7 +13,6 @@ import numpy as np
 import pandas as pd
 from commons.utils import *
 
-
 class MeanBaselineModel(BaseEstimator, ClassifierMixin):  
     """ Baseline Model - Predicts the mean of the ratings """
 
@@ -44,11 +43,3 @@ class MeanBaselineModel(BaseEstimator, ClassifierMixin):
 
         predictions = self.predict(X)
         return absolute_error(y, predictions)
-
-  
-print "Average MAE with all Features (MeanBaselineModel): ", model_cross_validation(estimator=MeanBaselineModel(), X=X_all, y=y_all, scoring_func=mae_scorer_cv, cv=10)
-# Average MAE => 6.28727070701
-print "Average MAE with only offensive features (MeanBaselineMode): ", model_cross_validation(estimator=MeanBaselineModel(), X=train_offensive, y=y_all, scoring_func=mae_scorer_cv, cv=10)
-# Average MAE => 6.28727070701
-print "Average MAE with only defensive features (MeanBaselineMode): ", model_cross_validation(estimator=MeanBaselineModel(), X=train_defensive, y=y_all, scoring_func=mae_scorer_cv, cv=10)
-# Average MAE => 6.28727070701

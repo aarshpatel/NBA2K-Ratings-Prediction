@@ -1,0 +1,5 @@
+Default Scores,Optimized Model Scores,Regression Model
+6.28,6.28,Baseline Model
+3.61,3.559,Linear Regression
+3.607,3.534,Ridge Regression
+3.8655,3.569,Random Forest Regressor
