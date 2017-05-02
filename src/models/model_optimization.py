@@ -1,3 +1,12 @@
+""" 
+Model Oiptimization - optimize models, Linear, Ridge, and Random Forest Regressor using feature selection
+and hyperparameter optimization 
+
+Feature Selection  - SelectKBest using mutual information
+Hyperparameter Optimization - GridSearchCV
+"""
+
+
 import sys
 sys.path.append('../../src/')
 
