@@ -14,6 +14,9 @@ train = np.load('../../data/numpy_data/train.npy')
 # Split the training data into just offensive and defensive data
 train_offensive = np.load('../../data/numpy_data/train_offensive.npy')
 train_defensive = np.load('../../data/numpy_data/train_defensive.npy')
+# Split the training data into just regular and advanced data
+train_regular = np.load('../../data/numpy_data/train_regular.npy')
+train_advanced = np.load('../../data/numpy_data/train_advanced.npy')
 
 # All features of the training data
 X_all = train[0:,0:-1]
@@ -24,6 +27,9 @@ X_train = np.load('../../data/numpy_data/X_train.npy')
 # Load the X training data with offensive and defensive data splits
 X_train_offensive = np.load('../../data/numpy_data/X_train_offensive.npy')
 X_train_defensive = np.load('../../data/numpy_data/X_train_defensive.npy')
+# Load the X training data with regular and advanced data splits
+X_train_regular = np.load('../../data/numpy_data/X_train_regular.npy')
+X_train_advanced = np.load('../../data/numpy_data/X_train_advanced.npy')
 # Loads the y training data
 y_train = np.load('../../data/numpy_data/y_train.npy')
 
@@ -32,6 +38,9 @@ X_test = np.load('../../data/numpy_data/X_test.npy')
 # Load the X testing data with offensive and defensive data splits
 X_test_offensive = np.load('../../data/numpy_data/X_test_offensive.npy')
 X_test_defensive = np.load('../../data/numpy_data/X_test_defensive.npy')
+# Load the X testing data with regular and advanced data splits
+X_test_regular = np.load('../../data/numpy_data/X_test_regular.npy')
+X_test_advanced = np.load('../../data/numpy_data/X_test_advanced.npy')
 # Load the y testing data
 y_test = np.load('../../data/numpy_data/y_test.npy')
 
@@ -62,7 +71,7 @@ def model_cross_validation(estimator, X, y, scoring_func, cv):
 
 def get_best_estimator(estimator, step, cv, scoring, parameters, X_train, y_train):
     """ Performs hyperparameter optimization for an estimator """
-    clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, verbose=10)
+    clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, n_jobs=-1, verbose=10)
     clf_mae.fit(X_train, y_train)
     return clf_mae.best_estimator_
 

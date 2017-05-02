@@ -1,0 +1,13 @@
+Running All Features vs. Regular Features vs. Advanced Features Experiment:
+    ==> Baseline Model
+        Baseline Model: Average MAE with all features: 6.28727070701
+        Baseline Model: Average MAE with regular features: 6.28727070701
+        Baseline Model: Average MAE with advanced features: 6.28727070701
+    ==> Linear Regression
+        Linear Regression: Average MAE with all features: 3.61816601526
+        Linear Regression: Average MAE with regular features: 3.72484615201
+        Linear Regression: Average MAE with advanced features: 3.75978184012
+    ==> Ridge Regression
+        Ridge Regression: Average MAE with all features: 3.6038503309
+        Ridge Regression: Average MAE with regular features: 3.71966495309
+        Ridge Regression: Average MAE with advanced features: 3.7594912818

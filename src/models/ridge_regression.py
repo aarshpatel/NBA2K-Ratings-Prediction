@@ -10,18 +10,17 @@ ridge_parameters = {
     'alpha': [0.01, 0.1, 1.0, 10, 100]
 }
 
-all_features_mae_ridge = get_model_mae(Ridge(), X_all, y_all, X_train, y_train, ridge_parameters)
-offensive_features_mae_ridge = get_model_mae(Ridge(), train_offensive, y_all, X_train_offensive, y_train, ridge_parameters)
-defensive_features_mae_ridge = get_model_mae(Ridge(), train_defensive, y_all, X_train_defensive, y_train, ridge_parameters)
-
-
-def run_ridge_offensive_defensive_features():
-    print "Average MAE with all Features (Ridge Regression): ", all_features_mae_ridge
+def run_ridge_regression_all_features():
     # 3.6038503309
-    print "Average MAE with only offensive features (Ridge Regression): ", offensive_features_mae_ridge
+    return get_model_mae(Ridge(), X_all, y_all, X_train, y_train, ridge_parameters)
+
+def run_ridge_regression_offensive_features():
     # 3.63253090173
-    print "Average MAE with only defensive features (Ridge Regression): ", defensive_features_mae_ridge
+    return get_model_mae(Ridge(), train_offensive, y_all, X_train_offensive, y_train, ridge_parameters)
+
+def run_ridge_regression_defensive_features():
     # 3.67993687709
+    return get_model_mae(Ridge(), train_defensive, y_all, X_train_defensive, y_train, ridge_parameters)
 
 
 
