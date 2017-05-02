@@ -44,10 +44,10 @@ def feature_selection_with_mutual_info(estimator, parameters):
     
     return absolute_error(y_test, predictions)
 
-print "LR: ", feature_selection_with_mutual_info(LinearRegression(), parameters = { "feature_selection__k": range(1, 49) })
-print "Kernel Ridge: ", feature_selection_with_mutual_info(KernelRidge(), parameters={"feature_selection__k": range(1, 49)})
+# print "LR: ", feature_selection_with_mutual_info(LinearRegression(), parameters = { "feature_selection__k": range(1, 49) })
+# print "Kernel Ridge: ", feature_selection_with_mutual_info(KernelRidge(), parameters={"feature_selection__k": range(1, 49)})
 
 # print "Ridge: ", feature_selection_with_mutual_info(Ridge(), parameters = {
 #         "feature_selection__k": range(1, 49)
 #         # "estimator__alpha": [0, .01, .1, 1, 10]
- })
+# })

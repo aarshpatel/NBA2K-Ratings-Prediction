@@ -2,12 +2,16 @@
 Implementation of the Utils file. This script contains all of the code that will be
 used in multiple scripts
 """
-
 import numpy as np
 
 from sklearn.metrics import make_scorer, mean_squared_error, mean_absolute_error
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import GridSearchCV
+
+from scipy import stats
+
+from OptimizeModel import OptimizeModel
+
 
 # Loads all of the training data
 train = np.load('../../data/numpy_data/train.npy')
@@ -68,19 +72,25 @@ def model_cross_validation(estimator, X, y, scoring_func, cv):
     """ Returns the mean of all cross validation scores """
     return np.mean(cross_val_score(estimator=estimator, X=X, y=y, scoring=scoring_func, cv=cv))
 
+def get_p_value(estimator, X_train, y_train):
 
-def get_best_estimator(estimator, step, cv, scoring, parameters, X_train, y_train):
-    """ Performs hyperparameter optimization for an estimator """
-    clf_mae = GridSearchCV(estimator=estimator, param_grid=parameters, cv=cv, scoring=scoring, n_jobs=-1, verbose=10)
-    clf_mae.fit(X_train, y_train)
-    return clf_mae.best_estimator_
+    sse = np.sum((estimator.predict(X_train) - y_train) ** 2, axis=0) / float(X_train.shape[0] - X_train.shape[1])
+    se = np.array([np.sqrt(np.diagonal(sse * np.linalg.inv(np.dot(X_train.T, X_train))))])
 
+    t = estimator.coef_ / se
+    p = 2 * (1 - stats.t.cdf(np.abs(t), y_train.shape[0] - X_train.shape[1]))
 
-def get_model_mae(estimator, X, y, X_data, y_data, param_grid):
+    return p
+
+def get_model_mae(estimator, X, y, X_train, y_train, X_test, y_test, param_grid):
     """ 
     Performs hyperparmeter optimization and then evaluates the best model 
     using K-Fold Cross Validation to get a MAE estimate.
     """
+    optimal = OptimizeModel(model=estimator, param_grid=param_grid)
 
-    optimal_model = get_best_estimator(estimator, 1, 10, mae_scorer_gs, param_grid, X_data, y_data)
+    optimal.feature_selection_and_hyperparameter_optimization(X_train, y_train, X_test, y_test)
+    optimal_model = optimal.best_estimator
+    # print optimal_model.named_steps['estimator']
+    # print "p value: ", get_p_value(optimal_model.named_steps['estimator'], X_train, y_train)
     return model_cross_validation(optimal_model, X, y, mae_scorer_cv, 10)
