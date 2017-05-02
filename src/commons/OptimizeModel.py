@@ -7,7 +7,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.feature_selection import mutual_info_regression, SelectKBest
 from sklearn.pipeline import Pipeline
 from sklearn.grid_search import GridSearchCV
-from feature_selection.mutual_info_feature_selection import *
 import utils
 
 
@@ -36,7 +35,7 @@ class OptimizeModel():
 
 
         print("Performing GridSearchCV on {0}...".format(self.model))
-        self.cv = GridSearchCV(pipeline, param_grid=self.param_grid, scoring=mae_scorer_gs, cv=5, verbose=10)
+        self.cv = GridSearchCV(pipeline, param_grid=self.param_grid, scoring=utils.mae_scorer_gs, cv=5, verbose=10)
         self.cv.fit(X_train, y_train)
 
         self.best_estimator = self.cv.best_estimator_ # obtain the best estimator after grid search

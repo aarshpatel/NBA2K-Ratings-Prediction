@@ -15,7 +15,7 @@ random_forest_params = {
     'n_jobs': [-1]
 }
 
-all_features_mae = get_model_mae(RandomForestRegressor(), X_all, y_all, X_train, y_train, random_forest_params)
-offensive_features_mae = get_model_mae(RandomForestRegressor(), train_offensive, y_all, X_train_offensive, y_train, random_forest_params)
-defensive_features_mae = get_model_mae(RandomForestRegressor(), train_defensive, y_all, X_train_defensive, y_train, random_forest_params)
+#all_features_mae = get_model_mae(RandomForestRegressor(), X_all, y_all, X_train, y_train, random_forest_params)
+#offensive_features_mae = get_model_mae(RandomForestRegressor(), train_offensive, y_all, X_train_offensive, y_train, random_forest_params)
+#defensive_features_mae = get_model_mae(RandomForestRegressor(), train_defensive, y_all, X_train_defensive, y_train, random_forest_params)
 
