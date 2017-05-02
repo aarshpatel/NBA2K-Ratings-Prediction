@@ -12,7 +12,6 @@ from sklearn.model_selection import cross_val_score
 import numpy as np
 from commons.utils import *
 
-
 class MeanBaselineModel(BaseEstimator, ClassifierMixin):  
     """ Baseline Model - Predicts the mean of the ratings """
 

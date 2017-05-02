@@ -1,0 +1,5 @@
+Regular Feature Stats,Advanced Feature Stats,All Features Stats,term
+6.287270707,6.287270707,6.2872,Baseline Model
+3.639391073,3.681461638,3.559,Linear Regression
+3.853265586,3.74482259,3.534,Ridge Regression
+3.791892588,3.75558042,3.569,Random Forest
