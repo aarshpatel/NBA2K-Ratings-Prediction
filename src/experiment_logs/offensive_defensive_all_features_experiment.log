@@ -6,8 +6,8 @@ Running All Features vs. Offensive Features vs. Defensive Features Experiment:
         Linear Regression: Average MAE with offensive features: 3.63939107251
         Linear Regression: Average MAE with defensive features: 3.68146163841
     ==> Ridge Regression
-        Ridge Regression: Average MAE with offensive features: 3.85326558583
+        Ridge Regression: Average MAE with offensive features: 3.80410565044
         Ridge Regression: Average MAE with defensive features: 3.7448225904
     ==> Random Forest Regression
-        Random Forest Regression: Average MAE with offensive features: 3.79189258755
-        Random Forest Regression: Average MAE with defensive features: 3.7555804203
+        Random Forest Regression: Average MAE with offensive features: 3.77912311551
+        Random Forest Regression: Average MAE with defensive features: 3.75421697214

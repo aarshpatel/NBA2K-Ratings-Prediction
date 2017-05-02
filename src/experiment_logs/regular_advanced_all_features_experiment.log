@@ -6,8 +6,8 @@ Running All Features vs. Regular Features vs. Advanced Features Experiment:
         Linear Regression: Average MAE with regular features: 3.72484615201
         Linear Regression: Average MAE with advanced features: 3.75978184012
     ==> Ridge Regression
-        Ridge Regression: Average MAE with regular features: 3.89439132246
+        Ridge Regression: Average MAE with regular features: 3.87800907657
         Ridge Regression: Average MAE with advanced features: 3.82679861347
     ==> Random Forest Regression
-        Random Forest Regression: Average MAE with regular features: 3.95049562595
-        Random Forest Regression: Average MAE with advanced features: 3.82316391277
+        Random Forest Regression: Average MAE with regular features: 3.947395742
+        Random Forest Regression: Average MAE with advanced features: 3.81342614372
