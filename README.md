@@ -1,3 +1,10 @@
+# NBA2K Player Rating Prediction using Machine Learning
+
+The goal of this project was to find a relationship between player season stats and their 2K ratings. We know that 2K sports 
+is using some algorithm to compute 2K ratings but we wanted to know more in depth of what this relationship. Our final project report 
+showcases some our findings and interesting conclusions from the experiments we performed
+
+
 ### READ ME FILE ###
 
 #### CONTAINS INSTRUCTIONS ON HOW TO RUN THE CODE FOR THIS PROJECT ####
